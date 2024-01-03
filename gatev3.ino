@@ -133,6 +133,8 @@ void loop() {
       Serial.println("reconnect:");
     WiFi.disconnect();
     WiFi.reconnect();
+mqclient.setServer(mqtt, 1883);
+   mqclient.setCallback(receivedCallback);
       mqt(99,0,1);
         }
         reconn=millis();
